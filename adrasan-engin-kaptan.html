@@ -26,6 +26,9 @@
             line-height: 1.6;
         }
         
+        /* Linklerin alt çizgisini kaldırma */
+        a { text-decoration: none; color: inherit; }
+
         header {
             background-color: var(--header-bg);
             border-bottom: 6px solid var(--accent-color);
@@ -39,7 +42,7 @@
         }
         
         .logo { font-size: 2.2rem; letter-spacing: 2px; }
-        .back-link { color: var(--text-dark); text-decoration: none; font-size: 1.1rem; }
+        .back-link { font-size: 1.1rem; }
 
         .hero {
             padding: 3rem 5%;
@@ -78,14 +81,41 @@
             gap: 10px;
         }
 
+        /* Harita Alanı Tasarımı */
         .map-container {
             position: relative;
             width: 100%;
-            max-width: 700px;
             margin: 2.5rem auto;
             border: 5px solid #000;
             box-shadow: 8px 8px 0 #000;
             overflow: hidden;
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .map-overlay-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            font-weight: bold;
+            border: 3px solid #000;
+            box-shadow: 4px 4px 0 #000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .map-overlay-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 #000;
         }
 
         .action-buttons {
@@ -103,8 +133,9 @@
             color: white;
             padding: 1.15rem 2.4rem;
             font-size: 1.25rem;
-            text-decoration: none;
             transition: all 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
@@ -112,9 +143,8 @@
             transform: scale(1.05);
         }
 
-        .btn-whatsapp {
-            background: #000;
-        }
+        .btn-instagram { background: #E1306C; }
+        .btn-web { background: #2b5a7b; }
 
         .description {
             font-size: 1.28rem;
@@ -147,30 +177,27 @@
     <div class="content">
         <div class="info-grid">
             <div class="info-card">
-                <h3><span class="material-symbols-outlined" style="color: var(--accent-color);">location_on</span> Adres</h3>
-                <p>Adrasan Engin Kaptan<br>Sahil Caddesi, 07350<br>Kumluca / Adrasan, Antalya</p>
+                <h3><span class="material-symbols-outlined">location_on</span> Adres</h3>
+                <p>Engin Kaptan<br>Sahil Caddesi, 07350<br>Kumluca / Adrasan, Antalya</p>
             </div>
             <div class="info-card">
-                <h3><span class="material-symbols-outlined" style="color: var(--accent-color);">phone</span> Telefon</h3>
+                <h3><span class="material-symbols-outlined">phone</span> Telefon</h3>
                 <p><strong><a href="tel:+905323328476" style="color: var(--accent-color);">+90 532 332 84 76</a></strong></p>
             </div>
             <div class="info-card">
-                <h3><span class="material-symbols-outlined" style="color: var(--accent-color);">access_time</span> Çalışma Saatleri</h3>
-                <p>Pazartesi - Pazar: 08:00 - 22:00</p>
+                <h3><span class="material-symbols-outlined">public</span> Web Sitesi</h3>
+                <p><a href="https://www.enginkaptan.com.tr" target="_blank" style="color: var(--accent-color); word-break: break-all;">www.enginkaptan.com.tr</a></p>
             </div>
         </div>
 
-        <!-- Harita Önizleme -->
         <div class="map-container">
-            <img src="https://maps.app.goo.gl/ZDmXTN27W6bjYeKPA" 
-                 alt="Adrasan Harita" 
-                 style="width: 100%; height: auto; display: block;">
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Adrasan+Sahil+Caddesi,+Kumluca,+Antalya" 
-               target="_blank" 
-               style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); text-decoration: none;">
-                <div style="background: white; color: #000; padding: 14px 28px; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
-                    📍 Yol Tarifi Al
-                </div>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.123456789!2d30.456789!3d36.299123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c1979669528d71%3A0xc47e923e3e099684!2sAdrasan%20Sahili!5e0!3m2!1str!2str!4v1700000000000" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+            <a href="https://maps.google.com/?q=Adrasan+Engin+Kaptan+Suluada+Tekne+Turu" target="_blank" class="map-overlay-btn">
+                <span class="material-symbols-outlined">directions</span> Yol Tarifi Al
             </a>
         </div>
 
@@ -178,17 +205,29 @@
             <a href="tel:+905323328476" class="btn">
                 <span class="material-symbols-outlined">phone</span> Hemen Ara
             </a>
-            <a href="https://wa.me/905323328476" target="_blank" class="btn btn-whatsapp">
-                <span class="material-symbols-outlined">chat</span> WhatsApp'tan Yaz
+            <a href="https://wa.me/905323328476" target="_blank" class="btn" style="background: #25D366;">
+                <span class="material-symbols-outlined">chat</span> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/adrasanenginkaptan/" target="_blank" class="btn btn-instagram">
+                <span class="material-symbols-outlined">share</span> Instagram
+            </a>
+            <a href="https://www.enginkaptan.com.tr" target="_blank" class="btn btn-web">
+                <span class="material-symbols-outlined">language</span> Web Sitesi
             </a>
         </div>
 
         <div class="description">
-            <h2>Güvenli ve Konforlu Suluada Keşfi</h2>
-            <p>Adrasan Engin Kaptan Suluada Tekne Turu olarak vizyonumuz; misafirlerimize hijyen, güvenlik ve konfor standartlarından ödün vermeden unutulmaz bir deniz tatili sunmaktır.</p>
-            <p>Engin Kaptan yönetimindeki teknemiz, hem bireysel katılımlar hem de gruplara özel turlar için tam donanımlıdır. Taze malzemelerle hazırlanan zengin öğle yemeği menümüz ve kaptanımızın bölge hakimiyeti sayesinde, Suluada ve çevresindeki gizli koyları en profesyonel şekilde keşfedeceksiniz.</p>
-            <p>Adrasan’da deniz tutkusu tecrübeyle buluşuyor; Engin Kaptan rehberliğinde unutulmaz bir Suluada tekne turuna davetlisiniz.</p>
-        </div>
+            <h2>Adrasan Engin Kaptan'la Güvenli ve Konforlu Suluada Keşfi</h2>
+            <p>Adrasan'ın o meşhur turkuaz sularına doğru bir yolculuk planlıyorsanız, bölgenin en deneyimli isimlerinden biri olan Engin Kaptan ile tanışmanızın vaktidir. Yerel bir rehber gözüyle hazırladığımız bu tavsiye yazısında, neden Adrasan Suluada tekne turu listesinin başında Engin Kaptan'ın yer aldığını detaylandırıyoruz..</p>
+            <p>Adrasan'da Denizin Kalbine Yolculuk: Engin Kaptan
+Antalya’nın saklı cenneti Adrasan’da tatil yaparken günübirlik bir aktivite arıyorsanız, Suluada rotası tartışmasız ilk tercihiniz olmalı. "Türkiye’nin Maldivleri" lakabını sonuna kadar hak eden bu ada, berrak suları ve bembeyaz kumsalıyla sizi büyüleyecek. Engin Kaptan, yılların verdiği bölge hakimiyetiyle sizi sadece popüler duraklara değil; Akseki, Sazak ve Ceneviz gibi Kumluca sahilinin en bakir koylarına da götürüyor..</p>
+<p>Neden Bu Turu Seçmelisiniz?
+Lokal Uzmanlık: Engin Kaptan sadece bir kaptan değil, bölgenin hikayelerine hakim bir rehber. Korsan Koyu'nun gizemli mağaralarını keşfederken yerel anlatılarla turunuz çok daha keyifli bir hal alıyor.
+
+Gurme Deniz Menüsü: Tekne turlarının en can alıcı noktası yemektir. Engin Kaptan’ın mutfağından çıkan taze balık, meşhur soslu makarna ve mevsim salatası, deniz havasıyla birleşince tam bir ziyafete dönüşüyor.
+
+Konfor ve Zamanlama: Sabah 10:00’da başlayan tur, kalabalıklardan uzak, sakin bir tempoda ilerliyor ve akşam 17:00 civarında son buluyor.<p>
+<p>Antalya Adrasan tekne turu planlayan gezginler için önerimiz; özellikle yaz aylarında yer bulmanın zor olduğu bu popüler rota için önceden rezervasyon yaptırmanızdır. Eğer hem güvenli hem de samimi bir günübirlik mavi yolculuk arıyorsanız, rotanızı gönül rahatlığıyla Engin Kaptan’a çevirebilirsiniz. Adrasan sahilinde deniz kokulu, huzur dolu bir gün sizi bekliyor!<p>        </div>
     </div>
 
     <footer>
