@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adrasan Engin Kaptan - Suluada Tekne Turu | Webkart Önerisi</title>
-    <meta name="description" content="Adrasan Engin Kaptan ile güvenli ve konforlu Suluada günlük tekne turu. Taze yemek, profesyonel kaptanlık ve gizli koy keşfi. Antalya Kumluca Adrasan.">
-    
+    <meta name="description" content="Adrasan Engin Kaptan ile güvenli ve konforlu Suluada günlük tekne turu. Antalya Kumluca Adrasan.">
+
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
@@ -38,89 +38,77 @@
             z-index: 1000;
         }
         
-        .logo {
-            font-size: 2.2rem;
-            letter-spacing: 2px;
-        }
-        
-        .back-link {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
-        
+        .logo { font-size: 2.2rem; letter-spacing: 2px; }
+        .back-link { color: var(--text-dark); text-decoration: none; font-size: 1.1rem; }
+
         .hero {
             padding: 3rem 5%;
             text-align: center;
             background-color: #c1c4b1;
             border-bottom: 6px solid var(--accent-color);
         }
-        
-        .hero h1 {
-            font-size: clamp(2.2rem, 8vw, 3.6rem);
-            margin-bottom: 0.5rem;
-        }
-        
-        .hero .subtitle {
-            font-size: 1.35rem;
-            color: #555;
-            margin-bottom: 1rem;
-        }
-        
+        .hero h1 { font-size: clamp(2.2rem, 8vw, 3.6rem); margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.35rem; color: #555; }
+
         .content {
             max-width: 920px;
             margin: 3rem auto;
             padding: 0 5%;
         }
-        
+
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1.8rem;
             margin: 2.5rem 0;
         }
-        
+
         .info-card {
             background: #c1c4b1;
             border: 4px solid #000;
             padding: 1.8rem;
             box-shadow: 8px 8px 0 #000;
         }
-        
-        .info-card h3 {
-            margin-bottom: 1rem;
+
+        .info-card h3 { margin-bottom: 1rem; color: var(--accent-color); }
+
+        .map-link {
             color: var(--accent-color);
+            text-decoration: underline;
+            cursor: pointer;
         }
-        
-        .map-placeholder {
-            height: 420px;
-            background: #ddd;
-            border: 5px solid #000;
-            margin: 3rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            color: #555;
-            text-align: center;
-        }
-        
-        .description {
-            font-size: 1.28rem;
-            line-height: 1.75;
+
+        .action-buttons {
             margin: 2.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-        
-        .cta-button {
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             background: #000;
             color: white;
-            padding: 1.3rem 3rem;
-            font-size: 1.35rem;
+            padding: 1.1rem 2.2rem;
+            font-size: 1.25rem;
             text-decoration: none;
-            display: inline-block;
-            margin: 1.5rem 0;
+            border: none;
+            cursor: pointer;
         }
-        
+
+        .btn-whatsapp {
+            background: #25D366;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .description { font-size: 1.28rem; line-height: 1.75; margin: 2.5rem 0; }
+
         footer {
             background-color: var(--header-bg);
             border-top: 6px solid var(--accent-color);
@@ -146,45 +134,42 @@
     <div class="content">
         <div class="info-grid">
             <div class="info-card">
-                <h3><span class="material-symbols-outlined">location_on</span> Adres</h3>
-                <p>Engin Kaptan<br>Sahil Caddesi, 07350<br>Kumluca / Adrasan, Antalya</p>
+                <h3>📍 Adres</h3>
+                <p>Engin Kaptan<br>
+                Sahil Caddesi, 07350<br>
+                Kumluca / Adrasan, Antalya</p>
+                <p style="margin-top: 15px;">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Adrasan+Sahil+Caddesi,+Kumluca,+Antalya" 
+                       target="_blank" class="map-link">
+                        → Yol Tarifi Al
+                    </a>
+                </p>
             </div>
+
             <div class="info-card">
-                <h3><span class="material-symbols-outlined">phone</span> Telefon</h3>
-                <p><strong>+90 532 332 84 76</strong></p>
+                <h3>📞 Telefon</h3>
+                <p><strong><a href="tel:+905323328476" style="color: var(--accent-color);">+90 532 332 84 76</a></strong></p>
             </div>
+
             <div class="info-card">
-                <h3><span class="material-symbols-outlined">access_time</span> Çalışma Saatleri</h3>
+                <h3>🕒 Çalışma Saatleri</h3>
                 <p>Pazartesi - Pazar<br>08:00 - 22:00</p>
             </div>
         </div>
 
-        <div class="map-placeholder">
-            📍 GOOGLE HARİTA BURAYA EKLENECEK<br>
-            (Adrasan Sahil Caddesi konumu)
+        <div class="action-buttons">
+            <a href="tel:+905323328476" class="btn">Hemen Ara 📞</a>
+            <a href="https://wa.me/905323328476" target="_blank" class="btn btn-whatsapp">WhatsApp'tan Yaz 💬</a>
+            <!-- Instagram hesabı varsa buraya ekleyin -->
+            <!-- <a href="https://instagram.com/engin kaptan hesabınız" target="_blank" class="btn" style="background:#E1306C;">Instagram</a> -->
         </div>
 
         <div class="description">
             <h2>Güvenli ve Konforlu Suluada Keşfi</h2>
-            <p>
-                Adrasan Suluada Tekne Turu olarak vizyonumuz; misafirlerimize hijyen, güvenlik ve konfor 
-                standartlarından ödün vermeden unutulmaz bir deniz tatili sunmaktır. 
-                Engin Kaptan yönetimindeki teknemiz, hem bireysel katılımlar hem de gruplara özel (private) 
-                turlar için tam donanımlıdır.
-            </p>
-            <p>
-                Taze malzemelerle hazırlanan zengin öğle yemeği menümüz ve kaptanımızın bölge hakimiyeti sayesinde, 
-                Suluada ve çevresindeki gizli koyları en profesyonel şekilde keşfedeceksiniz.
-            </p>
-            <p>
-                Adrasan’da deniz tutkusu tecrübeyle buluşuyor; Engin Kaptan rehberliğinde 
-                unutulmaz bir Suluada tekne turuna davetlisiniz.
-            </p>
+            <p>Adrasan Suluada Tekne Turu olarak vizyonumuz; misafirlerimize hijyen, güvenlik ve konfor standartlarından ödün vermeden unutulmaz bir deniz tatili sunmaktır. Engin Kaptan yönetimindeki teknemiz, hem bireysel katılımlar hem de gruplara özel (private) turlar için tam donanımlıdır.</p>
+            <p>Taze malzemelerle hazırlanan zengin öğle yemeği menümüz ve kaptanımızın bölge hakimiyeti sayesinde, Suluada ve çevresindeki gizli koyları en profesyonel şekilde keşfedeceksiniz.</p>
+            <p>Adrasan’da deniz tutkusu tecrübeyle buluşuyor; Engin Kaptan rehberliğinde unutulmaz bir Suluada tekne turuna davetlisiniz.</p>
         </div>
-
-        <a href="tel:+905323328476" class="cta-button">
-            HEMEN ARA <span class="material-symbols-outlined">phone</span>
-        </a>
     </div>
 
     <footer>
