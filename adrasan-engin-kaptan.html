@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrasan Engin Kaptan - Suluada Tekne Turu | Webkart Önerisi</title>
+    <title>Adrasan Engin Kaptan - Suluada Tekne Turu | Webkart</title>
     <meta name="description" content="Adrasan Engin Kaptan ile güvenli ve konforlu Suluada günlük tekne turu. Antalya Kumluca Adrasan.">
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
@@ -70,12 +70,22 @@
             box-shadow: 8px 8px 0 #000;
         }
 
-        .info-card h3 { margin-bottom: 1rem; color: var(--accent-color); }
-
-        .map-link {
+        .info-card h3 {
+            margin-bottom: 1rem;
             color: var(--accent-color);
-            text-decoration: underline;
-            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .map-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 2.5rem auto;
+            border: 5px solid #000;
+            box-shadow: 8px 8px 0 #000;
+            overflow: hidden;
         }
 
         .action-buttons {
@@ -88,26 +98,29 @@
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             background: #000;
             color: white;
-            padding: 1.1rem 2.2rem;
+            padding: 1.15rem 2.4rem;
             font-size: 1.25rem;
             text-decoration: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-whatsapp {
-            background: #25D366;
+            transition: all 0.3s;
         }
 
         .btn:hover {
+            background: var(--accent-color);
             transform: scale(1.05);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
         }
 
-        .description { font-size: 1.28rem; line-height: 1.75; margin: 2.5rem 0; }
+        .btn-whatsapp {
+            background: #000;
+        }
+
+        .description {
+            font-size: 1.28rem;
+            line-height: 1.75;
+            margin: 2.5rem 0;
+        }
 
         footer {
             background-color: var(--header-bg);
@@ -134,49 +147,53 @@
     <div class="content">
         <div class="info-grid">
             <div class="info-card">
-                <h3>📍 Adres</h3>
-                <p>Engin Kaptan<br>
-                Sahil Caddesi, 07350<br>
-                Kumluca / Adrasan, Antalya</p>
-                <p style="margin-top: 15px;">
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=Adrasan+Sahil+Caddesi,+Kumluca,+Antalya" 
-                       target="_blank" class="map-link">
-                        → Yol Tarifi Al
-                    </a>
-                </p>
+                <h3><span class="material-symbols-outlined" style="color: var(--accent-color);">location_on</span> Adres</h3>
+                <p>Adrasan Engin Kaptan<br>Sahil Caddesi, 07350<br>Kumluca / Adrasan, Antalya</p>
             </div>
-
             <div class="info-card">
-                <h3>📞 Telefon</h3>
+                <h3><span class="material-symbols-outlined" style="color: var(--accent-color);">phone</span> Telefon</h3>
                 <p><strong><a href="tel:+905323328476" style="color: var(--accent-color);">+90 532 332 84 76</a></strong></p>
             </div>
-
             <div class="info-card">
-                <h3>🕒 Çalışma Saatleri</h3>
-                <p>Pazartesi - Pazar<br>08:00 - 22:00</p>
+                <h3><span class="material-symbols-outlined" style="color: var(--accent-color);">access_time</span> Çalışma Saatleri</h3>
+                <p>Pazartesi - Pazar: 08:00 - 22:00</p>
             </div>
         </div>
 
+        <!-- Harita Önizleme -->
+        <div class="map-container">
+            <img src="https://maps.app.goo.gl/ZDmXTN27W6bjYeKPA" 
+                 alt="Adrasan Harita" 
+                 style="width: 100%; height: auto; display: block;">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Adrasan+Sahil+Caddesi,+Kumluca,+Antalya" 
+               target="_blank" 
+               style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); text-decoration: none;">
+                <div style="background: white; color: #000; padding: 14px 28px; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                    📍 Yol Tarifi Al
+                </div>
+            </a>
+        </div>
+
         <div class="action-buttons">
-            <a href="tel:+905323328476" class="btn">Hemen Ara 📞</a>
-            <a href="https://wa.me/905323328476" target="_blank" class="btn btn-whatsapp">WhatsApp'tan Yaz 💬</a>
-            <!-- Instagram hesabı varsa buraya ekleyin -->
-            <!-- <a href="https://instagram.com/engin kaptan hesabınız" target="_blank" class="btn" style="background:#E1306C;">Instagram</a> -->
+            <a href="tel:+905323328476" class="btn">
+                <span class="material-symbols-outlined">phone</span> Hemen Ara
+            </a>
+            <a href="https://wa.me/905323328476" target="_blank" class="btn btn-whatsapp">
+                <span class="material-symbols-outlined">chat</span> WhatsApp'tan Yaz
+            </a>
         </div>
 
         <div class="description">
             <h2>Güvenli ve Konforlu Suluada Keşfi</h2>
-            <p>Adrasan Suluada Tekne Turu olarak vizyonumuz; misafirlerimize hijyen, güvenlik ve konfor standartlarından ödün vermeden unutulmaz bir deniz tatili sunmaktır. Engin Kaptan yönetimindeki teknemiz, hem bireysel katılımlar hem de gruplara özel (private) turlar için tam donanımlıdır.</p>
-            <p>Taze malzemelerle hazırlanan zengin öğle yemeği menümüz ve kaptanımızın bölge hakimiyeti sayesinde, Suluada ve çevresindeki gizli koyları en profesyonel şekilde keşfedeceksiniz.</p>
+            <p>Adrasan Engin Kaptan Suluada Tekne Turu olarak vizyonumuz; misafirlerimize hijyen, güvenlik ve konfor standartlarından ödün vermeden unutulmaz bir deniz tatili sunmaktır.</p>
+            <p>Engin Kaptan yönetimindeki teknemiz, hem bireysel katılımlar hem de gruplara özel turlar için tam donanımlıdır. Taze malzemelerle hazırlanan zengin öğle yemeği menümüz ve kaptanımızın bölge hakimiyeti sayesinde, Suluada ve çevresindeki gizli koyları en profesyonel şekilde keşfedeceksiniz.</p>
             <p>Adrasan’da deniz tutkusu tecrübeyle buluşuyor; Engin Kaptan rehberliğinde unutulmaz bir Suluada tekne turuna davetlisiniz.</p>
         </div>
     </div>
 
     <footer>
         <p>© 2026 WEBKART.COM.TR — Yerel İşletme Önerileri</p>
-        <p style="margin-top: 10px; font-size: 0.85rem;">
-            Bu sayfa Webkart tarafından bağımsız olarak hazırlanmıştır.
-        </p>
+        <p style="margin-top: 10px; font-size: 0.85rem;">Bu sayfa Webkart tarafından bağımsız olarak hazırlanmıştır.</p>
     </footer>
 
 </body>
