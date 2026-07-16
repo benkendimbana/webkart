@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antalya Modern Mermer & Granit - Mermer Tezgah | Webkart</title>
+    <meta name="description" content="Antalya Modern Mermer & Granit: Muratpaşa merkezli atölyemizde mermer tezgah, granit yüzeyler, Çimstone & kuvars ve mezar modelleri. Antalya'nın her köşesine en hızlı ve en uygun hizmet. Yeşildere Mh. Gazi Blv. No:560/1 Muratpaşa / Antalya. Tel: 0533 317 11 46">
+
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Antalya Modern Mermer & Granit",
+        "url": "https://www.antalyamodernmermer.com.tr/",
+        "telephone": "+90 533 317 11 46",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Yeşildere Mah. Gazi Blv. No:560/1",
+            "addressLocality": "Muratpaşa",
+            "addressRegion": "Antalya",
+            "addressCountry": "TR"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #aaae9d;
+            --accent-color: #da7452;
+            --header-bg: #c1c4b1;
+            --text-dark: #1a1a1a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Special Elite', system-ui, monospace;
+            background-color: var(--bg-color);
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Linklerin alt çizgisini kaldırma */
+        a { text-decoration: none; color: inherit; }
+
+        header {
+            background-color: var(--header-bg);
+            border-bottom: 6px solid var(--accent-color);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-size: 2.2rem; letter-spacing: 2px; }
+        .back-link { font-size: 1.1rem; }
+
+        .hero {
+            padding: 3rem 5%;
+            text-align: center;
+            background-color: #c1c4b1;
+            border-bottom: 6px solid var(--accent-color);
+        }
+        .hero h1 { font-size: clamp(2.2rem, 8vw, 3.6rem); margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.35rem; color: #555; }
+
+        .content {
+            max-width: 920px;
+            margin: 3rem auto;
+            padding: 0 5%;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin: 2.5rem 0;
+        }
+
+        .info-card {
+            background: #c1c4b1;
+            border: 4px solid #000;
+            padding: 1.8rem;
+            box-shadow: 8px 8px 0 #000;
+        }
+
+        .info-card h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Harita Alanı Tasarımı */
+        .map-container {
+            position: relative;
+            width: 100%;
+            margin: 2.5rem auto;
+            border: 5px solid #000;
+            box-shadow: 8px 8px 0 #000;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .map-overlay-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            font-weight: bold;
+            border: 3px solid #000;
+            box-shadow: 4px 4px 0 #000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .map-overlay-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 #000;
+        }
+
+        .action-buttons {
+            margin: 2.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #000;
+            color: white;
+            padding: 1.15rem 2.4rem;
+            font-size: 1.25rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .btn-instagram { background: #E1306C; }
+        .btn-web { background: #2b5a7b; }
+
+        .description {
+            font-size: 1.28rem;
+            line-height: 1.75;
+            margin: 2.5rem 0;
+        }
+        .description h2 { margin-bottom: 1.2rem; }
+        .description p { margin-bottom: 1.4rem; }
+
+        /* Hizmet Kartları */
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.1rem;
+            margin: 1.5rem 0 3rem;
+        }
+        .service-chip {
+            background: #c1c4b1;
+            border: 4px solid #000;
+            box-shadow: 6px 6px 0 #000;
+            padding: 0.95rem 1.5rem;
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .service-chip .material-symbols-outlined { color: var(--accent-color); }
+
+        /* Hizmet Bölgeleri */
+        .region-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin: 1.5rem 0 1rem;
+        }
+        .region-chip {
+            background: #aaae9d;
+            border: 3px solid #000;
+            box-shadow: 4px 4px 0 #000;
+            padding: 0.55rem 1.15rem;
+            font-size: 1.02rem;
+            transition: 0.2s;
+        }
+        .region-chip:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 #000;
+        }
+
+        footer {
+            background-color: var(--header-bg);
+            border-top: 6px solid var(--accent-color);
+            padding: 3rem 5%;
+            text-align: center;
+            color: #555;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">WEBKART</div>
+        <a href="/" class="back-link">← Ana Sayfaya Dön</a>
+    </header>
+
+    <div class="hero">
+        <h1>ANTALYA MODERN MERMER & GRANİT</h1>
+        <p class="subtitle">Antalya'nın Her Köşesine En Hızlı ve En Uygun Hizmet • Muratpaşa / Antalya</p>
+    </div>
+
+    <div class="content">
+        <div class="info-grid">
+            <div class="info-card">
+                <h3><span class="material-symbols-outlined">location_on</span> Adres</h3>
+                <p>Antalya Modern Mermer & Granit<br>Yeşildere Mah. Gazi Blv. No:560/1<br>Muratpaşa / ANTALYA</p>
+            </div>
+            <div class="info-card">
+                <h3><span class="material-symbols-outlined">phone</span> Telefon</h3>
+                <p><strong><a href="tel:+905333171146" style="color: var(--accent-color);">+90 533 317 11 46</a></strong></p>
+            </div>
+            <div class="info-card">
+                <h3><span class="material-symbols-outlined">public</span> Web Sitesi</h3>
+                <p><a href="https://www.antalyamodernmermer.com.tr/" target="_blank" style="color: var(--accent-color); word-break: break-all;">www.antalyamodernmermer.com.tr</a></p>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps?q=Ye%C5%9Fildere%20Mahallesi%20Gazi%20Bulvar%C4%B1%20No%3A560%2F1%2C%20Muratpa%C5%9Fa%2FAntalya&z=15&output=embed"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Ye%C5%9Fildere+Mahallesi+Gazi+Bulvar%C4%B1+No%3A560%2F1+Muratpa%C5%9Fa+Antalya" target="_blank" class="map-overlay-btn">
+                <span class="material-symbols-outlined">directions</span> Yol Tarifi Al
+            </a>
+        </div>
+
+        <div class="action-buttons">
+            <a href="tel:+905333171146" class="btn">
+                <span class="material-symbols-outlined">phone</span> Hemen Ara
+            </a>
+            <a href="https://wa.me/905333171146" target="_blank" class="btn" style="background: #25D366;">
+                <span class="material-symbols-outlined">chat</span> WhatsApp
+            </a>
+            <a href="https://www.antalyamodernmermer.com.tr/" target="_blank" class="btn btn-web">
+                <span class="material-symbols-outlined">language</span> Web Sitesi
+            </a>
+        </div>
+
+        <div class="description">
+            <h2>Mermerin En Doğal Hali, Modern Mekanlarınızda</h2>
+            <p>Muratpaşa merkezli atölyemizde, mermerin en doğal halini modern mekanlarınıza taşıyoruz. Tasarımlarımızda yapaylıktan uzak duruyor, taşın kendi dokusunu ön plana çıkarıyoruz. Lara, Yeşilbahçe, Fener ve Şirinyalı mahallelerinden başlayarak; Döşemealtı projelerindeki prestijli konutlara ve Konyaaltı (Gürsu, Altınkum, Uncalı) bölgesindeki çağdaş mutfaklara imzamızı atıyoruz.</p>
+            <p>Sunduğumuz mermer tezgah, granit yüzeyler ve çimstone modelleri ile Antalya'nın en iyisi olmayı hedefliyoruz. Kepez, Aksu ve Serik genelinde en hızlı montaj ekibimizle hizmet verirken, kaliteden ödün vermeden en uygun fiyat garantisi sunuyoruz. Atölyeden halka satış avantajıyla bütçenize en uygunu bizde!</p>
+            <p>Doğu Antalya'nın kalbi Manavgat ve Alanya bölgelerinde; otel projelerinden lüks villalara kadar geniş bir yelpazede granit uygulamaları sunuyoruz. Side, Ilıca, Sarılar, Mahmutlar ve Konaklı gibi mahallelerde doğallığı bozmayan bir işçilik sergiliyoruz. Ayrıca Korkuteli, Elmalı, Kemer, Kumluca, Finike, Demre, Gazipaşa ve Kaş ilçelerimizde de en yakın mermer atölyesi olarak yanınızdayız.</p>
+            <p>Modern Mermer & Granit, Antalya genelinde kaliteli ürün çeşitliliği, kusursuz işçilik ve güvenilir hizmet anlayışıyla sektörün en popüler ve öncü seçeneklerinden biridir.</p>
+
+            <h2>Hizmetlerimiz</h2>
+            <div class="services-list">
+                <div class="service-chip"><span class="material-symbols-outlined">countertops</span> Mermer Tezgah</div>
+                <div class="service-chip"><span class="material-symbols-outlined">layers</span> Granit Yüzeyler</div>
+                <div class="service-chip"><span class="material-symbols-outlined">diamond</span> Çimstone & Kuvars</div>
+                <div class="service-chip"><span class="material-symbols-outlined">workspace_premium</span> Mezar Modelleri</div>
+            </div>
+
+            <h2>Hizmet Bölgelerimiz</h2>
+            <div class="region-chips">
+                <div class="region-chip">Muratpaşa Mermer Tezgah</div>
+                <div class="region-chip">Kepez Mermer Tezgah</div>
+                <div class="region-chip">Konyaaltı Mermer Tezgah</div>
+                <div class="region-chip">Döşemealtı Mermer Tezgah</div>
+                <div class="region-chip">Aksu Mermer Tezgah</div>
+                <div class="region-chip">Serik Mermer Tezgah</div>
+                <div class="region-chip">Manavgat Mermer Tezgah</div>
+                <div class="region-chip">Alanya Mermer Tezgah</div>
+                <div class="region-chip">Kemer Mermer Tezgah</div>
+                <div class="region-chip">Kumluca Mermer Tezgah</div>
+                <div class="region-chip">Finike Mermer Tezgah</div>
+                <div class="region-chip">Kaş & Kalkan Mermer Tezgah</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 WEBKART.COM.TR — Yerel İşletme Önerileri</p>
+        <p style="margin-top: 10px; font-size: 0.85rem;">Bu sayfa Webkart tarafından bağımsız olarak hazırlanmıştır.</p>
+    </footer>
+
+</body>
+</html>
